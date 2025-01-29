@@ -3,6 +3,7 @@ using UnityEngine;
 public class script : MonoBehaviour
 {
 
+    gun[] guns;
     float moveSpeed = 5;
 
     bool moveUp;
@@ -10,11 +11,13 @@ public class script : MonoBehaviour
     bool moveLeft;
     bool moveRight;
     bool speedUp;
+    bool shoot;
 
     
     void Start()
     {
-        
+        guns = transform.GetComponentsInChildren<gun>();
+
     }
 
     
@@ -26,7 +29,15 @@ public class script : MonoBehaviour
         moveRight = Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D);
         speedUp = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
 
-
+        shoot = Input.GetKeyDown(KeyCode.N);
+        if (shoot)
+        {
+            shoot = false;
+            foreach (gun gun in guns)
+            {
+                gun.Shoot();
+            }
+        }
 
     }
     private void FixedUpdate()
@@ -65,24 +76,24 @@ public class script : MonoBehaviour
 
         pos += move;
 
-        if (pos.x <= -16)
+        if (pos.x <= -1)
         {
-            pos.x = -16;
+            pos.x = -1;
         }
 
-        if (pos.x >= 17.24f)
+        if (pos.x >= 18)
         {
-            pos.x = 17.24f;
+            pos.x = 18;
         }
 
-        if (pos.y <= -4.21f)
+        if (pos.y <= 1)
         {
-            pos.y = -4.21f;
+            pos.y = 1;
                 }
 
-        if (pos.y >= 16)
+        if (pos.y >= 10.98f)
         {
-            pos.y = 16;
+            pos.y = 10.98f;
                 }
 
         
