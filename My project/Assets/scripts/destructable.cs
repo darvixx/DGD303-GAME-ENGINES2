@@ -1,11 +1,14 @@
 using UnityEngine;
 
+
 public class destructable : MonoBehaviour
 {
 
+   
 
 
- 
+
+
 
 
     void Start()
@@ -31,10 +34,12 @@ public class destructable : MonoBehaviour
                 Destroy(bullet.gameObject);
             }
         }
+       
     }
 
     private void OnDestroy()
     {
         
+       
     }
 }

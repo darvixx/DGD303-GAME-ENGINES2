@@ -401,6 +401,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.29f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.29f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
 "Assets/gun1.cs"
+"Assets/mainmenu.cs"
 "Assets/scripts/bullet.cs"
 "Assets/scripts/bullet1.cs"
 "Assets/scripts/destructable.cs"
